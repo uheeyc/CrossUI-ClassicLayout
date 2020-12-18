@@ -1,22 +1,27 @@
 xui.Class('App', 'xui.Module',{
     Instance:{
         iniComponents : function(){
-            // [[Code created by CrossUI RAD Tools
+            // [[Code created by CrossUI RAD Studio
             var host=this, children=[], append=function(child){children.push(child.get(0));};
-
-            append((new xui.UI.Layout())
-            .setHost(host,"ctl_layout5")
-            .setItems([{"id":"before", "pos":"before", "size":100, "min":50, "max":400, "locked":false, "folded":false, "hidden":false, "cmd":false}, {"id":"main", "min":10, "size":450}, {"id":"after", "pos":"after", "size":50, "min":20, "max":400, "locked":false, "folded":false, "hidden":false, "cmd":false}])
+            
+            append(
+                xui.create("xui.UI.HTMLButton")
+                .setHost(host,"xui_ui_htmlbutton4")
+                .setLeft("5.333333333333333em")
+                .setTop("3.8095238095238093em")
+                .setCaption("原生按钮")
             );
-
-            host.ctl_layout5.append((new xui.UI.Layout())
-            .setHost(host,"ctl_layout13")
-            .setItems([{"id":"before", "pos":"before", "size":150, "min":10, "locked":false, "folded":false, "hidden":false, "cmd":true}, {"id":"main", "min":10, "size":530}, {"id":"after", "pos":"after", "size":120, "min":10, "locked":false, "folded":false, "hidden":false, "cmd":false}])
-            .setType("horizontal")
-            , "main");
-
+            
+            append(
+                xui.create("xui.UI.Button")
+                .setHost(host,"xui_ui_button5")
+                .setLeft("12.952380952380953em")
+                .setTop("3.8095238095238093em")
+                .setCaption("普通按钮")
+            );
+            
             return children;
-            // ]]Code created by CrossUI RAD Tools
+            // ]]Code created by CrossUI RAD Studio
         }
     }
 });
